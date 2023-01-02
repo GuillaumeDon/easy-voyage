@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ma page d'accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+article {
+  width: 30%;
+  margin-bottom: 50px;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+}
+
+article h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+article p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin-bottom: 10px;
+  }
+  main {
+    margin: 20px;
+  }
+  article {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <article>
+      <img src="article1.jpg" alt="Article 1">
+      <h2>Titre de l'article 1</h2>
+      <p>Description de l'article 1</p>
+    </article>
+    <article>
+      <img src="article2.jpg" alt="Article 2">
+      <h2>Titre de l'article 2</h2>
+      <p>Description de l'article 2</p>
+    </article>
+    <article>
+      <img src="article3.jpg" alt="Article 3">
+      <h2>Titre de l'article 3</h2>
+      <p>Description de l'article 3</p>
+    </article>
+  </main>
+</body>
+</html>
+
+

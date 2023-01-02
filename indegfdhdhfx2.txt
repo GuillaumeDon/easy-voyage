@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenue sur Easy Voyage, la où se trouvent les meilleures offres de voyage">
+    <meta name="keywords" content="voyage, reservation, facile">
+    <meta name="author" content="Guillaume Donizetti">
+    <title>Easy Voyage</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/486886617b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="SiteHeader">
+
+        <div class="SiteHeader-content layout">
+
+            <div class="SiteHeader-logoBox">
+                <img class=" SiteHeader-logoBox-box" src="img/logo.png" alt="logo du site">
+            </div>
+
+            <div class="SiteHeader-personnalSpace">
+                <i class="SiteHeader-personalSpace-userIcon fa-solid fa-user"></i>
+                <p class="SiteHeader-personnalSpace-title">Mon espace personnel</p>
+                <a class="SiteHeader-personnalSpace-signIn">S'inscrire</a>
+                <a class="SiteHeader-personnalSpace-signUp">Se connecter</a>
+            </div>
+
+            <nav class="SiteHeader-navigation">
+                <ul class="SiteHeader-navigation-menu">
+                    <li class="">
+                        <ul class="SiteHeader-navigation-menu-destination">
+                            <li class="SiteHeader-navigation-menu-destination-item1">Destination A</li>
+                            <li class="SiteHeader-navigation-menu-destination-item2">Destination B</li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <ul class="SiteHeader-navigation-menu-inspiration">
+                            <li class="SiteHeader-navigation-menu-inspiration-item1">Inspiration A</li>
+                            <li class="SiteHeader-navigation-menu-inspiration-item2">Inspiration B</li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <ul class="SiteHeader-navigation-menu-whereToGo">
+                            <li class="SiteHeader-navigation-menu-whereToGo-item1">Ou aller A</li>
+                            <li class="SiteHeader-navigation-menu-whereToGo-item2">Ou aller B</li>
+                        </ul>
+                    </li>
+
+                    <li class="SiteHeader-navigation-menu-contact">Contacter un agent</li>
+
+                </ul>
+            </nav>
+
+
+
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,22 @@
+SiteFooter
+    SiteFooter-content layout
+        SiteFooter-logoBox
+            SiteFooter-logoBox-box
+        SiteFooter-contactBox
+            SiteFooter-contactBox-text
+            SiteFooter-contactBox-mail
+            SiteFooter-contactBox-phone
+        SiteFooter-lawBox
+            SiteFooter-lawBox-whoAreWe
+            SiteFooter-lawBox-politic
+            SiteFooter-lawBox-mentions
+        SiteFooter-connectionBox
+            SiteFooter-connectionBox-signIn
+            SiteFooter-connectionBox-signUp
+        SiteFooter-socialNetworkBox
+            SiteFooter-socialNetworkBox-facebook
+            SiteFooter-socialNetworkBox-twitter
+            SiteFooter-socialNetworkBox-instagram
+            SiteFooter-socialNetworkBox-youtube
+            SiteFooter-socialNetworkBox-linkedin
+        SiteFooter-copyright

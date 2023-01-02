@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma page avec une barre de navigation responsive</title>
+  <style>
+    /* Style pour la barre de navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+    }
+    /* Style pour les éléments de la barre de navigation (liens) */
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      margin-right: 15px;
+    }
+    /* Style pour le menu burger */
+    .navbar-burger {
+      display: none; /* Masqué par défaut */
+      cursor: pointer;
+      color: #fff;
+      font-size: 24px;
+    }
+    /* Style pour la liste du menu burger */
+    .navbar-menu {
+      display: flex; /* Affiché par défaut */
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      /* Masqué par défaut */
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    /* Style pour les éléments de la liste du menu burger (liens) */
+    .navbar-menu a {
+      display: block;
+      margin: 15px;
+      font-size: 18px;
+    }
+    /* Style pour l'affichage du menu burger sur les petits écrans */
+    @media (max-width: 768px) {
+      .navbar-burger {
+        display: block;
+      }
+      .navbar-menu {
+        transform: translateX(0); /* Affiché sur les petits écrans */
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Contact</a>
+    <div class="navbar-burger" id="navbar-burger">
+      Menu
+    </div>
+  </nav>
+  <ul class="navbar-menu" id="navbar-menu">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <script>
+    // Ajoute un événement click sur l'élément avec l'ID "navbar-burger"
+    document.getElementById("navbar-burger").addEventListener("click", function() {
+      // Toggle la classe "is-active" sur l'élément avec l'ID "navbar-burger"
+      this.classList.toggle("is-active");
+      // Toggle la classe "is-active" sur l'élément avec l'ID "navbar-menu"
+      document.getElementById("navbar-menu").classList.toggle("is-active");
+    });
+  </script>
+</body>
+</html>
