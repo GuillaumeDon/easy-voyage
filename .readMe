@@ -1,0 +1,3 @@
+Pour utiliser la BDD, renommer le fichier config.sample.php en config.php.
+Mettre les identifiants de sa base de données.
+La structure de la BDD est présente dans le fichier biblio/bdd
