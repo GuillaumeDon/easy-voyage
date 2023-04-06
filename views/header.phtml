@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light header-container">
+  <div class="header-container__logo">
+    <a class="navbar-brand" href="home">
+      <?= $env->getPathImage('img/header-footer/small-logo.png', 'none'); ?>
+    </a>
+  </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav nav__list">
+      <li class="nav__item">
+        <a class="nav__link nav__link--dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Inspirations
+        </a>
+        <ul class="nav__dropdown">
+          <?php foreach ($categories as $category) : ?>
+            <li class="nav__dropdown-item">
+              <a href="categoryJourneys?category_id=<?php echo $category['id']; ?>">
+                <?php echo $category['category_label']; ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Destinations
+        </a>
+        <ul class="nav__dropdown">
+          <li class="nav__dropdown-item">
+            <ul>
+              <?php foreach ($continents as $continent) : ?>
+                <li class="nav__dropdown-item__continent">
+                  <?php echo htmlspecialchars($continent['continent_label']); ?>
+                  <ul>
+                    <?php foreach ($continent['countries'] as $country) : ?>
+                      <li class="nav__dropdown-item__country">
+                        <a href="countryJourneys?country_id=<?php echo $country['id']; ?>"><?php echo htmlspecialchars($country['name']); ?></a>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link nav__link--dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Quand partir?
+        </a>
+        <ul class="nav__dropdown">
+          <?php foreach ($departures as $departure) : ?>
+            <li class="nav__dropdown-item">
+              <a href="departureJourneys?departure_id=<?php echo urlencode($departure['id']); ?>"><?php echo $departure['departure_label']; ?></a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="contact">Nous contacter</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="register">S'inscrire</a>
+      </li>
+      <li class="nav__item">
+        <?php if (isset($_SESSION['user_id'])) : ?>
+          <a class="nav__link" href="logout">Se déconnecter</a>
+        <?php else : ?>
+          <a class="nav__link" href="login">Se connecter</a>
+        <?php endif; ?>
+      </li>
+    </ul>
+  </div>
+</nav>

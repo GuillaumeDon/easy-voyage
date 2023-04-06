@@ -1,0 +1,143 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$font-color: #ffffff;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+.header-container {
+  background-image: url('../img/header-footer/background-header.jpg');
+  background-position: center;
+  background-size: cover;
+  list-style-type: none;
+
+  &__logo {
+    padding: 10px;
+
+    a {
+      display: inline-block;
+
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+
+  
+  .nav__list {
+    display: flex;
+    list-style-type: none;
+    margin-top: 0px;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    background-color: rgba(13, 10, 10, 0.591);
+    font-family: $fontFamilyTitle;
+    
+    
+    
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .nav__item {
+    margin: 0 10px;
+    position: relative;
+    
+    &:hover .nav__dropdown {
+        display: block;
+      }
+
+    @include mobile {
+      margin: 5px 0;
+    }
+  }
+
+  .nav__link {
+    display: block;
+    text-transform: uppercase;
+    color: $font-color;
+    text-decoration: none;
+    padding: 15px;
+    list-style-type: none;
+
+    &:hover,
+    &--active {
+      background-color: $secondary-color;
+    }
+
+    &--dropdown:hover + .nav__dropdown,
+    &--dropdown:focus + .nav__dropdown {
+      display: block;
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
+  }
+
+  .nav__dropdown {
+    display: none;
+    position: absolute;
+    background-color: $secondary-color;
+    min-width: 400px;
+    z-index: 1;
+    list-style-type: none;
+
+    .nav__dropdown-item {
+       display: inline-block;
+       
+
+      &__continent{
+        color: $thirdColorLight;
+      }
+
+      &__country{
+        display: inline-block;
+        
+      }
+
+      a {
+        display: block;
+        padding: 10px;
+        color: $font-color;
+        text-decoration: none;
+        // list-style-type: none;
+
+        &:hover {
+          background-color: darken($secondary-color, 10%);
+        }
+      }
+    }
+
+    @include mobile {
+      position: static;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  @include mobile {
+    .justify-content-center {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.burger-icon span {
+  display: block;
+  width: 1035px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+

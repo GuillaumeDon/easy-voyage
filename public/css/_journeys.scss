@@ -1,0 +1,44 @@
+.table-wrapper {
+    overflow-x: auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .journey-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #eee;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    @media screen and (max-width: 767px) {
+      th, td {
+        display: block;
+        width: 100%;
+      }
+      
+      th {
+        text-align: center;
+      }
+      
+      td {
+        text-align: center;
+      }
+      
+      th:nth-child(n+2),
+      td:nth-child(n+2) {
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+  

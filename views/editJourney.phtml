@@ -1,0 +1,82 @@
+<form action="journeys?action=update" method="post">
+    <input type="hidden" name="id" value="<?php echo $journey['id']; ?>">
+
+    <div>
+        <label for="journey_label">Libellé du voyage</label>
+        <input type="text" name="journey_label" id="journey_label" value="<?php echo $journey['journey_label']; ?>">
+    </div>
+
+    <div>
+        <label for="journey_title">Titre du voyage</label>
+        <input type="text" name="journey_title" id="journey_title" value="<?php echo $journey['journey_title']; ?>">
+    </div>
+
+    <div>
+        <label for="journey_description">Description du voyage</label>
+        <textarea name="journey_description" id="journey_description"><?php echo $journey['journey_description']; ?></textarea>
+    </div>
+
+    <div>
+        <label for="journey_duration">Durée du voyage</label>
+        <input type="text" name="journey_duration" id="journey_duration" value="<?php echo $journey['journey_duration']; ?>">
+    </div>
+
+    <div>
+        <label for="journey_price">Prix du voyage</label>
+        <input type="number" name="journey_price" id="journey_price" value="<?php echo $journey['journey_price']; ?>">
+    </div>
+
+    <div>
+        <label for="hostel_title">Titre de l'hébergement</label>
+        <input type="text" name="hostel_title" id="hostel_title" value="<?php echo $journey['hostel_title']; ?>">
+    </div>
+
+    <div>
+        <label for="hostel_description">Description de l'hébergement</label>
+        <textarea name="hostel_description" id="hostel_description"><?php echo $journey['hostel_description']; ?></textarea>
+    </div>
+
+    <div>
+        <label for="hostel_picture">Image de l'hébergement</label>
+        <input type="text" name="hostel_picture" id="hostel_picture" value="<?php echo $journey['hostel_picture']; ?>">
+    </div>
+
+    <div>
+        <label for="circuit_title">Titre du circuit</label>
+        <input type="text" name="circuit_title" id="circuit_title" value="<?php echo $journey['circuit_title']; ?>">
+    </div>
+
+    <div>
+        <label for="circuit_description">Description du circuit</label>
+        <textarea name="circuit_description" id="circuit_description"><?php echo $journey['circuit_description']; ?></textarea>
+    </div>
+
+    <div>
+        <label for="circuit_picture">Image du circuit</label>
+        <input type="text" name="circuit_picture" id="circuit_picture" value="<?php echo $journey['circuit_picture']; ?>">
+    </div>
+
+    <div>
+        <label for="formalities">Formalités</label>
+        <textarea name="formalities" id="formalities"><?php echo $journey['formalities']; ?></textarea>
+    </div>
+
+    <div>
+        <label for="departure_id">ID du départ</label>
+        <input type="number" name="departure_id" id="departure_id" value="<?php echo $journey['departure_id']; ?>">
+    </div>
+
+    <div>
+        <label for="category_id">ID de la catégorie</label>
+        <input type="number" name="category_id" id="category_id" value="<?php echo $journey['category_id']; ?>">
+    </div>
+
+    <div>
+        <label for="country_id">ID du pays</label>
+        <input type="number" name="country_id" id="country_id" value="<?php echo $journey['country_id']; ?>">
+    </div>
+
+    <div>
+        <input type="submit" value="Mettre à jour">
+    </div>
+</form>

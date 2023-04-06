@@ -1,0 +1,49 @@
+<div class="slider">
+  <div class="slider__slides">
+    <?php if (isset($journeys_pictures[$journey['id']])) : ?>
+      <?php foreach ($journeys_pictures[$journey['id']] as $index => $picture) : ?>
+        <img src="../public/img/country/<?php echo $picture['picture']; ?>" <?php echo $index === 0 ? 'class="slider__slide slider__slide--active"' : 'class="slider__slide"'; ?>>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+  <div class="slider__controls">
+    <button class="slider__control slider__control--left">
+      <img src="../public/img/svg/left.svg">
+    </button>
+    <button class="slider__control slider__control--right">
+      <img src="../public/img/svg/right.svg">
+    </button>
+  </div>
+  <div class="slider__circles">
+    <?php if (isset($journeys_pictures[$journey['id']])) : ?>
+      <?php foreach ($journeys_pictures[$journey['id']] as $index => $picture) : ?>
+        <button data-clic="<?php echo $index + 1; ?>" class="slider__circle <?php echo $index === 0 ? 'slider__circle--active' : ''; ?>"></button>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div class="slider">
+  <div class="cont-slides">
+    <php foreach ($slider_pictures as $index => $picture) : ?>
+      <img src="<= $picture['picture'] ?>" class="<= $index === 0 ? 'active' : '' ?>">
+    <php endforeach; ?>
+  </div>
+  <div class="commandes">
+    <button class="left">
+      <img src="../public/img/svg/left.svg">
+    </button>
+    <button class="right">
+      <img src="../public/img/svg/right.svg">
+    </button>
+  </div>
+  <div class="cercles">
+    <php foreach ($slider_pictures as $index => $picture) : ?>
+      <button data-clic="<= $index + 1 ?>" class="cercle <= $index === 0 ? 'active-cercle' : '' ?>"></button>
+    <php endforeach; ?>
+  </div>
+</div> -->

@@ -1,0 +1,87 @@
+// // Variables
+
+// Google Font import (optional)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+// Mixins
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// General styles
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $backgroundColor;
+  color: $secondaryDarkColor;
+  line-height: 1.6;
+}
+
+// Journey styles
+.journey {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  // margin-top: 10px;
+  // margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: rgb(81, 80, 80) 10px 10px 10px;
+  max-width: 1000px;
+  margin: 10px auto 30px auto;
+
+  &:nth-child(odd) {
+    background-color: $thirdColorLight;
+  }
+
+  &:nth-child(even) {
+    background-color: $fourthColor;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  // Journey content styles
+  &__content {
+    flex: 1;
+    padding-right: 20px;
+
+    @include mobile {
+      padding-right: 0;
+    }
+  }
+
+  // Journey title styles
+  &__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: $secondColor;
+  }
+
+  // Journey description styles
+  &__description {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+
+  // Journey "More" link styles
+  &__more {
+    background-color: $secondColorLight;
+    border-color: $secondColorLight;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    color: $font-color;
+
+    &:hover,
+    &:focus {
+      background-color: darken($secondColorLight, 10%);
+      border-color: darken($secondColorLight, 10%);
+    }
+  }
+}

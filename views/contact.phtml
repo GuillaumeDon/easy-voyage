@@ -1,0 +1,19 @@
+<?php if (isset($_SESSION['user_id'])) : ?>
+    <!-- <div id="messageContact" class="message-box"></div> -->
+    <!-- <p id="messageContact" class="message-box"></p> -->
+    <form id="contactForm">
+    <h1 class="titlePage">Formulaire de contact</h1>
+    <form id="contactForm" action="" method="post">
+        <label for="title">Titre:</label>
+        <input type="text" id="title" name="title" >
+        <br>
+        <label for="content">Message:</label>
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea>
+        <br>
+        <input type="submit" value="Envoyer">
+    </form>
+<?php else : ?>
+    <p>Vous devez être connecté pour envoyer un message.</p>
+<?php endif; ?>
+<!-- <p id="message"></p> -->
+<script src="public/js/contact.js"></script>

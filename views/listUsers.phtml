@@ -1,0 +1,25 @@
+<h1 class="titlePage">Annuaire utilisateurs</h1>
+<div class="table-wrapper">
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th class="user-table__header">ID</th>
+        <th class="user-table__header">Prénom</th>
+        <th class="user-table__header">Nom</th>
+        <th class="user-table__header">Email</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($users as $user) : ?>
+        <tr class="user-table__row">
+          <td class="user-table__cell"><?= htmlspecialchars($user['id']) ?></td>
+          <td class="user-table__cell"><?= htmlspecialchars($user['firstname']) ?></td>
+          <td class="user-table__cell"><?= htmlspecialchars($user['lastname']) ?></td>
+          <td class="user-table__cell"><?= htmlspecialchars($user['email']) ?></td>
+
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>

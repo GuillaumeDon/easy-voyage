@@ -1,0 +1,38 @@
+<h1 class="titlePage">Messages</h1>
+<div class="table-wrapper">
+  <table class="message-table">
+    <thead>
+      <tr class="message-table__row">
+        <th class="message-table__header">User Firstname</th>
+        <th class="message-table__header">User Lastname</th>
+        <!-- <th class="message-table__header">Message ID</th> -->
+        <th class="message-table__header">Title</th>
+        <!-- <th class="message-table__header">Content</th> -->
+        <th class="message-table__header">Date</th>
+
+        <th class="message-table__header">User Email</th>
+        <th class="message-table__header">Lire</th>
+        <th class="message-table__header">Archiver</th>
+        <th class="message-table__header">Effacer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($messages as $message) : ?>
+        <tr class="message-table__row">
+          <td class="message-table__cell"><?= $message['firstname'] ?></td>
+          <td class="message-table__cell"><?= $message['lastname'] ?></td>
+          <!-- <td class="message-table__cell"><?= $message['id'] ?></td> -->
+          <td class="message-table__cell"><?= $message['title'] ?></td>
+          <!-- <td class="message-table__cell"><?= $message['content'] ?></td> -->
+          <td class="message-table__cell"><?= $message['date_creation'] ?></td>
+
+          <td class="message-table__cell"><?= $message['email'] ?></td>
+          <td class="message-table__cell"><a href="readMessage?id=<?= $message['id'] ?>" class="btn btn-primary">Lire</a></td>
+          <td class="message-table__cell"><a href="archiveMessage?id=<?= $message['id'] ?>" class="btn btn-warning" onclick="return confirm('Êtes-vous sûr de vouloir archiver ce message ?')">Archiver</a></td> <!-- Nouveau lien d'archivage -->
+
+          <td class="message-table__cell"><a href="deleteMessage?id=<?= $message['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce message ?')">Effacer</a></td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>

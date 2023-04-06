@@ -1,0 +1,45 @@
+
+
+.table-wrapper {
+  overflow-x: auto;
+  
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $fontFamilyTitle;
+
+  &__header,
+  &__cell {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+
+  &__header {
+    background-color: $secondColorLight;
+    font-weight: bold;
+  }
+
+  &__row {
+    &:nth-child(even) {
+      background-color: $firstColorLight;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__header,
+    &__cell {
+      padding: 10px / 2;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__header,
+    &__cell {
+      padding: 10px / 3;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$font-color: #ffffff;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+nav.navbar-expand-lg{
+  flex-direction: column;
+  align-items : stretch;
+}
+
+.header-container-admin {
+  background-image: url('../img/header-footer/background-header.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .header-logo {
+    padding: 10px;
+
+    a {
+      display: inline-block;
+    
+    
+
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+
+  .nav__list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamilyTitle;
+   
+    background-color: rgba(75, 63, 63, 0.737);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .nav__item {
+    margin: 0 10px;
+
+    @include mobile {
+      margin: 5px 0;
+    }
+  }
+
+  .nav__link {
+    display: block;
+    color: $font-color;
+    text-decoration: none;
+    padding: 15px;
+
+    &:hover,
+    &--active {
+      background-color: $secondary-color;
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
+  }
+
+  @include mobile {
+    .justify-content-center {
+      justify-content: flex-start;
+    }
+  }
+}

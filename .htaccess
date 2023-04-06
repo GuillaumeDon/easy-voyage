@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteBase /easy-voyage/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ public/index.php
+

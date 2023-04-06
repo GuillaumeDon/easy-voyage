@@ -1,0 +1,27 @@
+<div class="container container--our-choice">
+  <div class="container__text container__text--1">
+    <h2>Des destinations sur chaque continent</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quos praesentium inventore ex officia eius nemo vel reprehenderit voluptate alias accusamus dolorum, tempora similique molestiae provident magnam aspernatur. Aliquam, totam inventore. Quis ab distinctio modi aut amet, adipisci accusamus nesciunt molestiae nisi sed molestias minus assumenda, ipsa fugiat ipsum dolor.</p>
+  </div>
+  <div class="container__image container__image--right">
+    <?= $env->getPathImage("img/country/" . $randomImage['picture'], "image"); ?>"
+  </div>
+</div>
+<div class="container container--where-to-go">
+  <div class="container__image container__image--left">
+    <?= $env->getPathImage('img/country/picture-10.jpg', 'image'); ?>
+  </div>
+  <div class="container__text container__text--2">
+    <h2>Où partir en <?php echo DateConversion::frenchMonthName(date('n')) . ' ' . date('Y'); ?>?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur enim dolore nemo expedita nam, praesentium nulla. Incidunt nesciunt, aperiam ipsam voluptates voluptatibus debitis, illo sunt sed consequuntur ea suscipit illum tempore maxime iusto molestiae quia quae eos laborum, nam consequatur ut. Sapiente eligendi praesentium tempore, numquam nam nesciunt suscipit facere.</p>
+  </div>
+</div>
+<div class="container container--our-team">
+  <div class="container__text container__text--3">
+    <h2>Pourquoi voyager avec nous?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae unde aperiam voluptates ut quae nulla quas dolorum aliquid sit incidunt quam est dolor quibusdam, id suscipit magni iusto neque odio omnis ducimus at aspernatur ipsam nobis repellendus. Dolore nemo, impedit sunt dolor quas sequi culpa modi, excepturi molestias ducimus explicabo.</p>
+  </div>
+  <div class="container__image container__image--right">
+    <?= $env->getPathImage('img/team/equipe.jpg', 'image'); ?>
+  </div>
+</div>

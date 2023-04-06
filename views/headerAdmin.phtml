@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light header-container">
+  <div class="header-container__logo">
+    <a class="navbar-brand" href="home">
+      <?= $env->getPathImage('img/header-footer/small-logo.png', 'none'); ?>
+    </a>
+  </div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav nav__list">
+      <li class="nav__item">
+        <a class="nav__link nav__link" aria-current="page" href="listUsers">Liste clients</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="message">Messages</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="journeys">Liste des voyages</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="createJourney">Créer un voyage</a>
+      </li>
+      <!-- <li class="nav__item">
+        <a class="nav__link" href="uploadPicture">Enregistrer photos</a>
+      </li> -->
+      <li class="nav__item">
+        <a class="nav__link" href="logout">Se déconnecter</a>
+      </li>
+    </ul>
+    </ul>
+  </div>
+</nav>
