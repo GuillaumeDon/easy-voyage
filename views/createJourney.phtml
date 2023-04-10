@@ -1,59 +1,21 @@
 <h1 class="form__title titlePage">Créer un voyage</h1>
 <form action="" id="createJourney" method="post" class="form__wrapper">
-    <label for="journey_label" class="form__label">Label</label>
-    <input type="text" name="journey_label" id="journey_label"  class="form__input">
-    <br>
-    <label for="journey_title" class="form__label">Titre de la description</label>
-    <input type="text" name="journey_title" id="journey_title"  class="form__input">
-    <br>
-    <label for="journey_description" class="form__label"> Description</label>
-    <textarea name="journey_description" id="journey_description"  class="form__textarea"></textarea>
-    <br>
-    <label for="journey_duration" class="form__label">Durée</label>
-    <input type="text" name="journey_duration" id="journey_duration"  class="form__input">
-    <br>
-    <label for="journey_price" class="form__label">Prix</label>
-    <input type="number" name="journey_price" id="journey_price"  class="form__input">
-    <br>
-    <label for="hostel_title" class="form__label">Hotel</label>
-    <input type="text" name="hostel_title" id="hostel_title"  class="form__input">
-    <br>
-    <label for="hostel_description" class="form__label">Hotel Description</label>
-    <textarea name="hostel_description" id="hostel_description"  class="form__textarea"></textarea>
-    <br>
-    <label for="hostel_picture" class="form__label">Hotel photo</label>
-    <input type="text" name="hostel_picture" id="hostel_picture"  class="form__input">
-    <br>
-    <label for="circuit_title" class="form__label">Circuit</label>
-    <input type="text" name="circuit_title" id="circuit_title"  class="form__input">
-    <br>
-    <label for="circuit_description" class="form__label">Circuit Description</label>
-    <textarea name="circuit_description" id="circuit_description"  class="form__textarea"></textarea>
-    <br>
-    <label for="circuit_picture" class="form__label">Circuit photo</label>
-    <input type="text" name="circuit_picture" id="circuit_picture"  class="form__input">
-    <br>
-    <label for="formalities" class="form__label">Formalités</label>
-    <textarea name="formalities" id="formalities"  class="form__textarea"></textarea>
-    <br>
-    <label for="departure_id" class="form__label">Depart</label>
+    <!-- ... -->
     <select name="departure_id" id="departure_id"  class="form__select">
         <?php foreach ($departures as $departure) : ?>
-            <option value="<?= $departure['id'] ?>"><?= $departure['departure_label'] ?></option>
+            <option value="<?= htmlspecialchars($departure['id']) ?>"><?= htmlspecialchars($departure['departure_label']) ?></option>
         <?php endforeach; ?>
     </select>
     <br>
-    <label for="category_id" class="form__label">Categorie</label>
     <select name="category_id" id="category_id"  class="form__select">
         <?php foreach ($categories as $category) : ?>
-            <option value="<?= $category['id'] ?>"><?= $category['category_label'] ?></option>
+            <option value="<?= htmlspecialchars($category['id']) ?>"><?= htmlspecialchars($category['category_label']) ?></option>
         <?php endforeach; ?>
     </select>
     <br>
-    <label for="country_id" class="form__label">Pays</label>
     <select name="country_id" id="country_id"  class="form__select">
         <?php foreach ($countries as $country) : ?>
-            <option value="<?= $country['id'] ?>"><?= $country['country_label'] ?></option>
+            <option value="<?= htmlspecialchars($country['id']) ?>"><?= htmlspecialchars($country['country_label']) ?></option>
         <?php endforeach; ?>
     </select>
     <br>

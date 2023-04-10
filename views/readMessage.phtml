@@ -4,33 +4,33 @@
         <tbody>
             <tr>
                 <th>Auteur</th>
-                <td><?= $message['firstname'] . " " . $message['lastname'] ?></td>
+                <td><?= htmlspecialchars($message['firstname']) . " " . htmlspecialchars($message['lastname']) ?></td>
             </tr>
             <tr>
                 <th>Email</th>
-                <td><?= $message['email'] ?></td>
+                <td><?= htmlspecialchars($message['email']) ?></td>
             </tr>
             <tr>
                 <th>Date</th>
-                <td><?= $message['date_creation'] ?></td>
+                <td><?= htmlspecialchars($message['date_creation']) ?></td>
             </tr>
             <tr>
                 <th>Titre</th>
-                <td><?= $message['title'] ?></td>
+                <td><?= htmlspecialchars($message['title']) ?></td>
             </tr>
             <tr>
                 <th>Contenu</th>
-                <td><?= nl2br($message['content']) ?></td>
+                <td><?= nl2br(htmlspecialchars($message['content'])) ?></td>
             </tr>
             <tr>
     <th>Archiver</th>
-    <td><a href="archiveMessage?id=<?= $message['id'] ?>" class="btn btn-warning" onclick="return confirm('Êtes-vous sûr de vouloir archiver ce message ?')">Archiver</a></td>
+    <td><a href="archiveMessage?id=<?= htmlspecialchars($message['id']) ?>" class="btn btn-warning" onclick="return confirm('Êtes-vous sûr de vouloir archiver ce message ?')">Archiver</a></td>
 </tr>
 
             <tr>
     <th>Supprimer</th>
    
-    <td><a href="deleteMessage?id=<?= $message['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce message ?')">Effacer</a></td>
+    <td><a href="deleteMessage?id=<?= htmlspecialchars($message['id']) ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce message ?')">Effacer</a></td>
 </tr>
 
         </tbody>

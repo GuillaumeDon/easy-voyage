@@ -1,23 +1,22 @@
 <?php if ($journey && is_array($journey)) : ?>
     <div class="readJourney">
-    <h1><?php echo $journey['journey_title']; ?></h1>
-    <p><?php echo $journey['journey_description']; ?></p>
-    <p>Durée du voyage : <?php echo $journey['journey_duration']; ?></p>
-    <p>Prix du voyage : <?php echo $journey['journey_price']; ?></p>
-    <p>Titre de l'auberge : <?php echo $journey['hostel_title']; ?></p>
-    <p>Description de l'auberge : <?php echo $journey['hostel_description']; ?></p>
-    <p>Image de l'auberge : <?php echo $journey['hostel_picture']; ?></p>
-    <p>Titre du circuit : <?php echo $journey['circuit_title']; ?></p>
-    <p>Description du circuit : <?php echo $journey['circuit_description']; ?></p>
-    <p>Image du circuit : <?php echo $journey['circuit_picture']; ?></p>
-    <p>Formalités : <?php echo $journey['formalities']; ?></p>
-    <p>ID du départ : <?php echo $journey['departure_id']; ?></p>
-    <p>ID de la catégorie : <?php echo $journey['category_id']; ?></p>
-    <p>ID du pays : <?php echo $journey['country_id']; ?></p>
-    <a href="journeys?action=edit&id=<?php echo $journey['id']; ?>" class="btn btn-primary">Éditer</a>
-    <a href="journeys?action=delete&id=<?= $journey['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce voyage ?');">Effacer</a>
+    <h1><?php echo htmlspecialchars($journey['journey_title']); ?></h1>
+    <p><?php echo htmlspecialchars($journey['journey_description']); ?></p>
+    <p>Durée du voyage : <?php echo htmlspecialchars($journey['journey_duration']); ?></p>
+    <p>Prix du voyage : <?php echo htmlspecialchars($journey['journey_price']); ?></p>
+    <p>Titre de l'auberge : <?php echo htmlspecialchars($journey['hostel_title']); ?></p>
+    <p>Description de l'auberge : <?php echo htmlspecialchars($journey['hostel_description']); ?></p>
+    <p>Image de l'auberge : <?php echo htmlspecialchars($journey['hostel_picture']); ?></p>
+    <p>Titre du circuit : <?php echo htmlspecialchars($journey['circuit_title']); ?></p>
+    <p>Description du circuit : <?php echo htmlspecialchars($journey['circuit_description']); ?></p>
+    <p>Image du circuit : <?php echo htmlspecialchars($journey['circuit_picture']); ?></p>
+    <p>Formalités : <?php echo htmlspecialchars($journey['formalities']); ?></p>
+    <p>ID du départ : <?php echo htmlspecialchars($journey['departure_id']); ?></p>
+    <p>ID de la catégorie : <?php echo htmlspecialchars($journey['category_id']); ?></p>
+    <p>ID du pays : <?php echo htmlspecialchars($journey['country_id']); ?></p>
+    <a href="journeys?action=edit&id=<?php echo htmlspecialchars($journey['id']); ?>" class="btn btn-primary">Éditer</a>
+    <a href="journeys?action=delete&id=<?= htmlspecialchars($journey['id']) ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce voyage ?');">Effacer</a>
 
-    
 <?php else : ?>
     <p>Aucun voyage trouvé avec l'ID donné.</p>
 <?php endif; ?>

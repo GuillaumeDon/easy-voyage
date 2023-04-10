@@ -31,10 +31,10 @@ $country_id = strip_tags($_POST['country_id']);
 
 if (!empty($journey_label) && !empty($journey_title) && !empty($journey_description) && !empty($journey_duration) && !empty($journey_price) && !empty($hostel_title) && !empty($hostel_description) && !empty($hostel_picture) && !empty($circuit_title) && !empty($circuit_description) && !empty($circuit_picture) && !empty($formalities) && !empty($departure_id) && !empty($category_id) && !empty($country_id)) {
 
-// $modelJourneys = new ModelJourneys();
+
 $modelJourneys->insertJourney($journey_label, $journey_title, $journey_description, $journey_duration, $journey_price, $hostel_title, $hostel_description, $hostel_picture, $circuit_title, $circuit_description, $circuit_picture, $formalities, $departure_id, $category_id, $country_id);
 echo json_encode(['success' => true]);
-// header('Location: journeys');
+
 
         exit;
 }

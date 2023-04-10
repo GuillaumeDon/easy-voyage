@@ -1,15 +1,15 @@
 <?php foreach ($journeys as $journey) : ?>
   <div class="journey">
     <div class="journey__content">
-      <h2 class="journey__title"><?php echo $journey['journey_title']; ?></h2>
-      <p class="journey__description"><?php echo $journey['journey_description']; ?></p>
-      <a href="readJourneysCustomer?action=read&id=<?= $journey['id'] ?>" class="journey__more btn btn-primary">En savoir plus</a>
+      <h2 class="journey__title"><?php echo htmlspecialchars($journey['journey_title']); ?></h2>
+      <p class="journey__description"><?php echo htmlspecialchars($journey['journey_description']); ?></p>
+      <a href="readJourneysCustomer?action=read&id=<?= htmlspecialchars($journey['id']) ?>" class="journey__more btn btn-primary">En savoir plus</a>
     </div>
     <div class="journey__slider slider">
       <div class="slider__slides">
         <?php if (isset($journeys_pictures[$journey['id']])) : ?>
           <?php foreach ($journeys_pictures[$journey['id']] as $index => $picture) : ?>
-            <img src="public/img/country/<?php echo $picture['picture']; ?>" <?php echo $index === 0 ? 'class="slider__slide slider__slide--active"' : 'class="slider__slide"'; ?>>
+            <img src="public/img/country/<?php echo htmlspecialchars($picture['picture']); ?>" <?php echo $index === 0 ? 'class="slider__slide slider__slide--active"' : 'class="slider__slide"'; ?>>
           <?php endforeach; ?>
         <?php endif; ?>
       </div>
@@ -24,7 +24,7 @@
       <div class="slider__circles">
         <?php if (isset($journeys_pictures[$journey['id']])) : ?>
           <?php foreach ($journeys_pictures[$journey['id']] as $index => $picture) : ?>
-            <button data-clic="<?php echo $index + 1; ?>" class="slider__circle <?php echo $index === 0 ? 'slider__circle--active' : ''; ?>"></button>
+            <button data-clic="<?php echo htmlspecialchars($index + 1); ?>" class="slider__circle <?php echo $index === 0 ? 'slider__circle--active' : ''; ?>"></button>
           <?php endforeach; ?>
         <?php endif; ?>
       </div>

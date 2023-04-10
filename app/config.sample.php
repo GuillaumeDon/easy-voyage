@@ -1,4 +1,7 @@
 <?php 
+
+//A renommer config.php pour que le site fonctionne
+//Voir le readMe
 const DB_HOST = '';
 const DB_NAME = '';
 const DB_USER = '';

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password_confirm = $_POST['password_confirm'];
 
     if ($password === $password_confirm) {
-        // Check if email already exists
+        // vérifie si le mail existe dans la BDD
         $user = $userModel->getUserByEmail($email);
 
     } else {
@@ -20,9 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        
     }
         if ($user) {
-            // Redirect back to the registration form with an error message
+            
             echo json_encode(['errorMail'=>'Le mail existe déjà!']);
-            // header("Location: register?error=email_exists");
+            
             exit();
         }
 

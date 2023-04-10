@@ -19,18 +19,18 @@
     <tbody>
       <?php foreach ($messages as $message) : ?>
         <tr class="message-table__row">
-          <td class="message-table__cell"><?= $message['firstname'] ?></td>
-          <td class="message-table__cell"><?= $message['lastname'] ?></td>
-          <!-- <td class="message-table__cell"><?= $message['id'] ?></td> -->
-          <td class="message-table__cell"><?= $message['title'] ?></td>
-          <!-- <td class="message-table__cell"><?= $message['content'] ?></td> -->
-          <td class="message-table__cell"><?= $message['date_creation'] ?></td>
+          <td class="message-table__cell"><?= htmlspecialchars($message['firstname']) ?></td>
+          <td class="message-table__cell"><?= htmlspecialchars($message['lastname']) ?></td>
+          <!-- <td class="message-table__cell"><?= htmlspecialchars($message['id']) ?></td> -->
+          <td class="message-table__cell"><?= htmlspecialchars($message['title']) ?></td>
+          <!-- <td class="message-table__cell"><?= htmlspecialchars($message['content']) ?></td> -->
+          <td class="message-table__cell"><?= htmlspecialchars($message['date_creation']) ?></td>
 
-          <td class="message-table__cell"><?= $message['email'] ?></td>
-          <td class="message-table__cell"><a href="readMessage?id=<?= $message['id'] ?>" class="btn btn-primary">Lire</a></td>
-          <td class="message-table__cell"><a href="archiveMessage?id=<?= $message['id'] ?>" class="btn btn-warning" onclick="return confirm('Êtes-vous sûr de vouloir archiver ce message ?')">Archiver</a></td> <!-- Nouveau lien d'archivage -->
+          <td class="message-table__cell"><?= htmlspecialchars($message['email']) ?></td>
+          <td class="message-table__cell"><a href="readMessage?id=<?= htmlspecialchars($message['id']) ?>" class="btn btn-primary">Lire</a></td>
+          <td class="message-table__cell"><a href="archiveMessage?id=<?= htmlspecialchars($message['id']) ?>" class="btn btn-warning" onclick="return confirm('Êtes-vous sûr de vouloir archiver ce message ?')">Archiver</a></td> <!-- Nouveau lien d'archivage -->
 
-          <td class="message-table__cell"><a href="deleteMessage?id=<?= $message['id'] ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce message ?')">Effacer</a></td>
+          <td class="message-table__cell"><a href="deleteMessage?id=<?= htmlspecialchars($message['id']) ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce message ?')">Effacer</a></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
