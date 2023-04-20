@@ -20,6 +20,8 @@ $container-color: #937e5f;
   border-radius: 30px;
   max-width: 1000px;
   margin: 10px auto 30px auto;
+  
+ 
 
   
 
@@ -27,7 +29,7 @@ $container-color: #937e5f;
     background-color: $firstColorLight;
     box-shadow: $darkShadow;
     border-radius: 10px;
-    padding: 10px;
+    padding: 30px;
   }
 
   &__title {
@@ -47,13 +49,16 @@ $container-color: #937e5f;
     width: 100%;
     // max-height: 400px;
     height: 600px;
+    
 
     overflow: hidden;
     margin-bottom: 15px;
+    
 
     @include mobile {
       max-height: 250px;
     }
+ 
   }
 
   &__infos,
@@ -61,6 +66,7 @@ $container-color: #937e5f;
     background-color: $fourthColor;
     
     box-shadow: $darkShadow;
+    padding: 30px;
   }
 
   &__formalities,
@@ -68,6 +74,7 @@ $container-color: #937e5f;
     background-color: $thirdColor;
     margin: 3em 0;
     box-shadow: $darkShadow;
+    padding: 30px;
     
 
   }

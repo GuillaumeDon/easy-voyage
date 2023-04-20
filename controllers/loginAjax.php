@@ -1,8 +1,8 @@
 <?php
 $userModel = new ModelUsers();
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = strip_tags($_POST['email']);
+    $password = strip_tags($_POST['password']);
 
     $user = $userModel->getUserByEmail($email);
 
@@ -11,7 +11,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION['user_email'] = $user['email'];
         $_SESSION['role_id'] = $user['role_id'];
         $_SESSION['user_firstname'] = $user['firstname'];
-
 
         echo json_encode(['success' => true]);
         exit;

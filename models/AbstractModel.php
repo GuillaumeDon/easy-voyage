@@ -2,8 +2,6 @@
 
 require_once __DIR__ . '/../src/Core/Database.php';
 
-
-
 class AbstractModel
 {
     protected Database $db;

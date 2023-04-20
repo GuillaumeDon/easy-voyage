@@ -134,6 +134,7 @@ class Environnement
         $this->checkConst(array('PATH_IMG'));
         return '<img ' .' class='.$cssClass . ' src="' . $this->getPathPublicAbsolute($fileName) . '"/>';
     }
+    
     function getURL($adresse)
     {
         // $this->checkConst(['PATH_ROOT2']);

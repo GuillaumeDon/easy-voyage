@@ -203,6 +203,7 @@ footer .footer-container .footer-social ul li a:hover {
 }
 .table-wrapper {
   overflow-x: auto;
+  margin: auto 10px;
 }
 
 .user-table {
@@ -430,7 +431,6 @@ button:hover {
 
 .table-wrapper {
   overflow-x: auto;
-  font-family: "Poppins", sans-serif;
 }
 
 .journey-table {
@@ -463,6 +463,12 @@ button:hover {
   .journey-table td:nth-child(n+2) {
     border-top: 1px solid #ddd;
   }
+}
+
+.submit {
+  background-color: #3498db;
+  color: white;
+  margin: 10px;
 }
 
 nav.navbar-expand-lg {
@@ -707,7 +713,7 @@ body {
   background-color: #B5B9B1;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
 }
 .journey-details__title {
   font-size: 28px;
@@ -732,11 +738,13 @@ body {
 .journey-details__infos, .journey-details__circuit {
   background-color: #C3B79D;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  padding: 30px;
 }
 .journey-details__formalities, .journey-details__hostel {
   background-color: #FBA083;
   margin: 3em 0;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  padding: 30px;
 }
 .journey-details__hostel-title, .journey-details__hostel-description {
   padding: 10px;

@@ -9,7 +9,7 @@ form.addEventListener('submit', (e) => {
     // create FormData object to store form data
     const formData = new FormData(form);
 
-    // make AJAX request to login.php
+   
     fetch('contactAjax', {
         method: 'POST',
         body: formData

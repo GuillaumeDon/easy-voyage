@@ -32,7 +32,8 @@ if(!$page){
 // Si la page n'existe pas on fait une erreur 404
 if (!array_key_exists($page, $routes)) {
     http_response_code(404);
-    echo 'Page introuvable';
+    // echo 'Page introuvable';
+    header("Location: home");
     exit;
 }
 

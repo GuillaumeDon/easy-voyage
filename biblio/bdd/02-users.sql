@@ -5,9 +5,9 @@ FLUSH PRIVILEGES;
 
 
 
-	CREATE USER ‘admin’@'localhost' IDENTIFIED BY ‘zrbzbfnnezvz’;
+	CREATE USER ‘adminEV01’@'localhost' IDENTIFIED BY ‘zrbzbf848TGINZRnnezvz’;
 GRANT
  SELECT, INSERT, UPDATE, DELETE, EXEC 
 ON bdd_easy_voyage.* 
-TO ‘admin’@'localhost';
+TO ‘adminEV01’@'localhost';
 FLUSH PRIVILEGES;

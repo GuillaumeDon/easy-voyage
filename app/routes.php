@@ -1,7 +1,7 @@
 <?php
 
 $routes=[
-    ''=>'home.php',
+    // ''=>'home.php',
     'home' => 'home.php',
     'categoryJourneys' => 'categoryJourneys.php',
     'contact' => 'contact.php',
