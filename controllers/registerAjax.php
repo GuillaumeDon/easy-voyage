@@ -5,6 +5,7 @@ $userModel = new ModelUsers();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstname = strip_tags($_POST['firstname']);
+    //ajouter un trim
     $lastname = strip_tags($_POST['lastname']);
     $email = strip_tags($_POST['email']);
     $password = $_POST['password'];
